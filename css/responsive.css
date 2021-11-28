@@ -28,7 +28,16 @@
 :: Landscape
 -------------------------- */
 /* TABLETS */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 780px) {
+  header {
+    padding: .5rem 3rem;
+  }
+  #header-wide {
+    display: flex;
+  }
+  #header-compact {
+    display: none;
+  }
   #blocks {
     padding: 6rem 3rem 4rem 3rem;
   }
@@ -87,6 +96,9 @@
 
 /* DESKTOPS */
 @media only screen and (min-width: 1180px) {
+  header {
+    padding: .5rem 6rem;
+  }
   .album-cover, buttons > .album-info {
     display: block;
   }

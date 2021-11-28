@@ -129,7 +129,7 @@ footer {
   flex-shrink: 0;
 }
 header {
-  padding: .5rem 6rem;
+  padding: .5rem 2rem;
   color: #3f4957;
   background: #ffffff;
   line-height: 0;
@@ -144,13 +144,6 @@ header {
 }
 .header-border {
   border-bottom: 1px solid rgba(0,0,0,.1);
-}
-.header-logo {
-  height: 40px;
-  width: auto;
-}
-header > a {
-  cursor: pointer;
 }
 footer {
   padding: 15px 25px;
@@ -170,9 +163,6 @@ header > img,
 header > h2,
 header > h3 {
   margin: 0 0 15px 0;
-}
-#blocks {
-  flex: 1 0 auto;
 }
 #bottom {
   z-index: 3;
@@ -202,6 +192,10 @@ header > h3 {
 /* --------------------------
 :: Block Design
 -------------------------- */
+#blocks {
+  padding: 6rem 2rem 4rem 2rem;
+  flex: 1 0 auto;
+}
 .block {
   height: 100px;
   cursor: pointer;
@@ -254,9 +248,6 @@ header > h3 {
 #lyrics {
   z-index: 4;
   flex-direction: column;
-}
-#blocks {
-  padding: 6rem 2rem 4rem 2rem;
 }
 #lyrics {
   padding: 6rem 2rem 1.5rem 2rem;
@@ -347,4 +338,64 @@ buttons {
 }
 buttons > .album-info, .album-cover {
   display: none;
+}
+
+/* --------------------------
+:: Header Navigation
+-------------------------- */
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+header a {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+header > nav > a {
+  padding: 10px;
+  margin: 0 0 0 10px;
+  border-bottom: 2px solid transparent;
+}
+header > nav > a:hover {
+  border-bottom: 2px solid #4e5860;
+}
+#header-wide {
+  display: none;
+}
+#truSearch {
+  border-radius: 5px;
+  background-color: #f5f7fa;
+  font-size: .75em;
+  flex: 1 0 auto;
+  margin: 0 80px 0 10px;
+}
+#truSearch > input {
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 0;
+}
+#truSearch > input[type="text"] {
+  background: transparent;
+  color: #4e5860;
+  padding: 0 5px 0 0;
+  outline: none;
+  flex: 1 0 auto;
+}
+#truSearch > input[type="submit"] {
+  font-family: inherit;
+  font-weight: 700;
+  background: transparent;
+  color: #4e5860;
+  cursor: pointer;
+  height: 35px;
+  padding: 0 15px;
+  flex-shrink: 0;
+}
+#truSearch > input[type="submit"]:hover {
+  color: #d67f3f;
+  transition: .2s ease;
+}
+#truSearch > svg {
+  margin: 0 15px;
+  width: 1em;
 }
