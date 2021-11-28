@@ -11,7 +11,7 @@
 <meta property="og:title" content="TruTunes - Synced Lyrics" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://trutunes.github.io/" />
-<meta property="og:image" content="https://trutunes.github.io/img/prev-5.png">
+<meta property="og:image" content="https://trutunes.github.io/img/preview.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
@@ -21,6 +21,7 @@
 <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
 <link rel="stylesheet" type="text/css" href="css/base.min.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/midnight.min.css"> -->
 <link rel="stylesheet" type="text/css" href="usr/userstyles.css">
 <link rel="shortcut icon" type="image/png" sizes="32x32" href="img/logo-32.png">
 <link rel="shortcut icon" type="image/png" sizes="16x16" href="img/logo-16.png">
@@ -37,12 +38,30 @@
     <sas>asd</sas>
   </header>
   <section id="lyrics" class="fixed flex">
+    <h2 class="album-info">
+      <p class="song">
+        <song>Carnival of Rust</song>
+      </p>
+      <p class="info">
+        <album>Carnival of Rust</album><br />
+        <artist>Poets of the Fall</artist>
+      </p>
+    </h2>
     <textarea id="lyricsText" onclick="selectText('lyricsText');" readonly>251</textarea>
     <buttons class="flex">
-      <span class="btn btn-first">Copy to Clipboard</span>
+      <img class="album-cover" src="img\logo-header.webp" />
+      <h2 class="album-info">
+        <p class="song">
+          <song>Carnival of Rust</song>
+        </p>
+        <p class="info">
+          <album>Carnival of Rust</album><br />
+          <artist>Poets of the Fall</artist>
+        </p>
+      </h2>
+      <span class="btn btn-first" onclick="copyText('lyricsText');">Copy to Clipboard</span>
       <a class="btn btn-second" href="lrc\Happy and Sad.lrc" download="Happy and Sad.lrc">Download LRC File</a>
     </buttons>
-    <!-- <a href="myfile.pdf" download="myfile.pdf">Download Your Expense Report</a> -->
   </section>
   <section id="blocks" class="row"></section>
   <footer class="flex flex-center">

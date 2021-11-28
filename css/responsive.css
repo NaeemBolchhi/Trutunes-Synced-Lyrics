@@ -11,26 +11,38 @@
 -------------------------- */
 @media only screen and (orientation: portrait) {
   .loading {
-    animation: coin-v 0.7s normal linear;
+    animation: fadeIn 0.7s normal linear;
     width: 20%;
     max-width: 350px;
   }
 }
 @media only screen and (orientation: landscape) {
   .loading {
-    animation: coin-v 0.7s normal linear;
+    animation: fadeIn 0.7s normal linear;
     height: 20%;
     max-height: 200px;
   }
 }
 
 /* --------------------------
-:: Block Columns
+:: Landscape
 -------------------------- */
 /* TABLETS */
 @media only screen and (min-width: 768px) {
-  section, #lyrics, #navbar, #config {
-    padding: 0 3rem !important;
+  #blocks {
+    padding: 6rem 3rem 4rem 3rem;
+  }
+  #lyrics {
+    padding: 6rem 3rem 1.5rem 3rem;
+  }
+  buttons {
+    flex-direction: row;
+  }
+  .btn-first {
+    margin: 0 5px 0 0;
+  }
+  .btn-second {
+    margin: 0 0 0 5px;
   }
   [class*="col-"] {
     padding: 15px;
@@ -75,8 +87,35 @@
 
 /* DESKTOPS */
 @media only screen and (min-width: 1180px) {
-  section, #lyrics, #navbar, #config {
-    padding: 0 6rem !important;
+  .album-cover, buttons > .album-info {
+    display: block;
+  }
+  buttons > .album-info {
+    margin: 0 0 60px 0;
+  }
+  #lyrics > .album-info {
+    display: none;
+  }
+  #lyrics {
+    flex-direction: row;
+  }
+  #lyricsText {
+    margin: 0 20px 0 0;
+  }
+  #blocks {
+    padding: 6rem 6rem 4rem 6rem;
+  }
+  #lyrics {
+    padding: 6rem 6rem 2.5rem 6rem;
+  }
+  buttons {
+    flex-direction: column;
+  }
+  .btn-first {
+    margin: 0 0 5px 0;
+  }
+  .btn-second {
+    margin: 5px 0 0 0;
   }
   .col-d1 {
     width: 8.33%;
@@ -113,5 +152,20 @@
   }
   .col-d12 {
     width: 100%;
+  }
+}
+
+/* --------------------------
+:: Portrait
+-------------------------- */
+/* Height Limit */
+@media only screen and (max-height: 600px) {
+  .album-cover {
+    display: none;
+  }
+}
+@media only screen and (max-height: 450px) {
+  buttons > .album-info {
+    display: none;
   }
 }

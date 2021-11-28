@@ -52,3 +52,14 @@ function addBlocks(n) {
 function selectText(element) {
   document.getElementById(element).select();
 }
+
+// Copy text on click.
+function copyText(element) {
+  document.getElementById(element).select();
+  var lyrics = document.getElementById(element).innerHTML;
+  navigator.clipboard.writeText(lyrics).then(function() {
+    document.getElementsByClassName('btn-first')[0].innerHTML = "Success! Copy Again?";
+  }, function() {
+    document.getElementsByClassName('btn-first')[0].innerHTML = "Failed! Try Again?";
+  });
+}
