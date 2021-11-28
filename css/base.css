@@ -1,0 +1,308 @@
+/* ==========================
+:: Template Name: TruTunes Base
+:: Author: NaeemBolchhi
+:: License: GPL-3.0
+:: Landing Page: https://naeembolchhi.github.io/
+:: Telegram Profile: https://t.me/NaeemBolchhi
+========================== */
+
+/* --------------------------
+:: Fonts
+-------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900');
+
+/* --------------------------
+:: Animation
+-------------------------- */
+@keyframes coin-v {
+  0% {
+    animation-timing-function: cubic-bezier(0.5856, 0.0703, 0.4143, 0.9297);
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(1800deg);
+  }
+}
+
+/* --------------------------
+:: General
+-------------------------- */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: #000000ff #96969600 !important;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+::selection {
+  color: #f7f7f7;
+  background: #4e5860;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1.2;
+}
+html {
+  font-family: "Nunito", sans-serif;
+}
+body {
+  color: #4e5860;
+  background: #f7f7f7;
+  padding: 0;
+  margin: 0;
+}
+a, img, footer {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+a {
+  color: #4e5860;
+  cursor: default;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #373e44;
+}
+button {
+  background: transparent;
+}
+album {
+  font-style: italic;
+}
+.info {
+  font-weight: 500;
+}
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.flex-center {
+  justify-content: center;
+}
+.flex-spaced {
+  justify-content: space-between;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.absolute,
+.fixed {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  display: none;
+}
+
+/* --------------------------
+:: Layouts
+-------------------------- */
+.container {
+  position: relative;
+  color: #4e5860;
+  margin: 0 auto;
+  height: 100%;
+}
+header,
+footer {
+  flex-shrink: 0;
+}
+header {
+  padding: 20px 25px;
+  color: #3f4957;
+  background: #ffffff;
+  width: 100%;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+}
+.header-shadow {
+  box-shadow: 0 1px 10px rgba(0,0,0,.08);
+}
+.header-border {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+footer {
+  padding: 15px 25px;
+  color: #3f4957;
+  background: #ffffff;
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,.1);
+  margin-top: 70px;
+}
+footer a {
+  cursor: pointer;
+  color: #3f4957;
+}
+footer a:hover {
+  color: #333b46;
+}
+header > img,
+header > h2,
+header > h3 {
+  margin: 0 0 15px 0;
+}
+#blocks {
+  flex: 1 0 auto;
+  margin-top: 85px;
+  padding: 0 25px;
+}
+.brand-logo {
+  height: 120px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+#bottom {
+  z-index: 3;
+}
+#top {
+  z-index: 21;
+  background: #251e3e;
+}
+.background {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* --------------------------
+:: Block Design
+-------------------------- */
+.block {
+  height: 100px;
+  cursor: pointer;
+  background: #ffffff;
+  text-align: left;
+  border-radius: 3px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  transition: transform 0.2s;
+}
+.block:hover {
+  background: #f6f7f8;
+  transform: translateY(-3px);
+}
+.block-icon {
+  height: 80%;
+  width: auto;
+  margin: 10px 20px;
+  border-radius: 3px;
+  background: #f7f7f7;
+}
+.block:hover > .block-icon {
+  background: #f7f7f7;
+}
+.block-icon > img {
+  width: auto;
+  height: 100%;
+  border-radius: 3px;
+}
+.block-txt {
+  color: #4e5860;
+  word-break: break-word;
+  font-weight: 700;
+  margin: 10px 10px 10px 0;
+}
+.block-txt > .song {
+  font-size: large;
+}
+.block-txt > .info {
+  margin-top: 5px;
+  font-size: medium;
+}
+.block:hover > .block-txt {
+  color: #373e44;
+}
+
+/* --------------------------
+:: Hoverboard Design
+-------------------------- */
+#lyrics {
+  z-index: 4;
+  flex-direction: column;
+}
+#lyrics, #navbar, #config {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  padding: 0 25px;
+}
+#lyricsText {
+  resize: none;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  text-align: center;
+  width: 100%;
+  margin: 100px 0 20px 0;
+  border: 1px solid transparent;
+  background: #f5f7fa;
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+  height: 100%;
+}
+#lyricsText:focus {
+  background: #f4f6f8;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0 40px 0;
+}
+.btn {
+  height: 3em;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom left, #f5911e, #b42819);
+  color: #ffffff;
+  font-weight: 700;
+}
+.btn-first {
+  margin: 0 0 10px 0;
+}
+.btn-second {
+  
+}
