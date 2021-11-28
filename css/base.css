@@ -129,9 +129,10 @@ footer {
   flex-shrink: 0;
 }
 header {
-  padding: 20px 25px;
+  padding: .5rem 6rem;
   color: #3f4957;
   background: #ffffff;
+  line-height: 0;
   width: 100%;
   position: fixed;
   z-index: 6;
@@ -143,6 +144,13 @@ header {
 }
 .header-border {
   border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+header > a {
+  cursor: pointer;
 }
 footer {
   padding: 15px 25px;
@@ -165,13 +173,6 @@ header > h3 {
 }
 #blocks {
   flex: 1 0 auto;
-}
-.brand-logo {
-  height: 120px;
-  width: auto;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
-    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
 #bottom {
   z-index: 3;
