@@ -63,3 +63,8 @@ function copyText(element) {
     document.getElementsByClassName('btn-first')[0].innerHTML = "Failed! Try Again?";
   });
 }
+
+// Go home.
+function goHome() {
+  window.location = window.location.origin;
+}
