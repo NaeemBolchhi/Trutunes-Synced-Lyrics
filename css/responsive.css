@@ -33,10 +33,13 @@
     padding: .5rem 3rem;
   }
   #header-wide {
-    display: flex;
+    display: block;
   }
   #header-compact {
     display: none;
+  }
+  #truSearch {
+    margin: 0 80px 0 10px;
   }
   #blocks {
     padding: 6rem 3rem 4rem 3rem;
