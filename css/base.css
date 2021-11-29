@@ -363,9 +363,11 @@ header > nav > a:hover {
   display: none;
 }
 #truSearch {
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #f5f7fa;
   font-size: .75em;
+  height: 35px;
+  display: none;
   flex: 1 0 auto;
   margin: 0 40px 0 10px;
 }
@@ -380,20 +382,6 @@ header > nav > a:hover {
   padding: 0 5px 0 0;
   outline: none;
   flex: 1 0 auto;
-}
-#truSearch > input[type="submit"] {
-  font-family: inherit;
-  font-weight: 700;
-  background: transparent;
-  color: #4e5860;
-  cursor: pointer;
-  height: 35px;
-  padding: 0 15px;
-  flex-shrink: 0;
-}
-#truSearch > input[type="submit"]:hover {
-  color: #d67f3f;
-  transition: .2s ease;
 }
 #truSearch > svg {
   margin: 0 15px;

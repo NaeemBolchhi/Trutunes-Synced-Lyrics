@@ -28,7 +28,10 @@
 :: Landscape
 -------------------------- */
 /* TABLETS */
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 768px) {
+  #truSearch {
+    display: flex;
+  }
   header {
     padding: .5rem 3rem;
   }
