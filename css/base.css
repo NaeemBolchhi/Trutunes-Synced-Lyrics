@@ -123,6 +123,7 @@ album {
   color: #4e5860;
   margin: 0 auto;
   height: 100%;
+  width: 100%;
 }
 header,
 footer {
@@ -195,6 +196,7 @@ header > h3 {
 #blocks {
   padding: 6rem 2rem 4rem 2rem;
   flex: 1 0 auto;
+  width: 100%;
 }
 .block {
   height: 100px;
@@ -264,13 +266,13 @@ header > h3 {
   resize: none;
   white-space: pre-wrap;
   overflow-y: scroll;
-  text-align: center;
+  text-align: left;
   width: 100%;
   margin: 0 0 20px 0;
+  padding: 15px 15px 0 15px;
   border: 1px solid transparent;
   background: #f5f7fa;
   transition-duration: 0.2s;
-  padding: 5px;
   border-radius: 3px;
   outline: none;
   height: 100%;

@@ -51,7 +51,7 @@
       <a href="">S</a>
     </nav>
   </header>
-  <section id="lyrics" class="fixed flex">
+  <section id="lyrics" class="fixed flex hidden">
     <h2 class="album-info">
       <p class="song">
         <song>Song Name</song>
@@ -61,9 +61,9 @@
         <artist>Artist Name</artist>
       </p>
     </h2>
-    <textarea id="lyricsText" onclick="selectText('lyricsText');" readonly>251</textarea>
+    <textarea id="lyricsText" onclick="selectText('lyricsText');" readonly>Synced Lyrics</textarea>
     <buttons class="flex">
-      <img class="album-cover" src="img\logo-header.webp" />
+      <img class="album-cover" src="img\logo-header.webp" alt="TruTunes" />
       <h2 class="album-info">
         <p class="song">
           <song>Song Name</song>
@@ -74,7 +74,7 @@
         </p>
       </h2>
       <span class="btn btn-first" onclick="copyText('lyricsText');">Copy to Clipboard</span>
-      <a class="btn btn-second" href="lrc\Happy and Sad.lrc" download="Happy and Sad.lrc">Download LRC File</a>
+      <a class="btn btn-second" href="" download="">Download LRC File</a>
     </buttons>
   </section>
   <section id="blocks" class="row"></section>
