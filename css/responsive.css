@@ -25,24 +25,21 @@
 }
 
 /* --------------------------
+:: Search View
+-------------------------- */
+@media only screen and (min-width: 468px) {
+  #truSearch {
+    display: flex;
+  }
+}
+
+/* --------------------------
 :: Landscape
 -------------------------- */
 /* TABLETS */
 @media only screen and (min-width: 768px) {
-  #truSearch {
-    display: flex;
-  }
   header {
     padding: .5rem 3rem;
-  }
-  #header-wide {
-    display: block;
-  }
-  #header-compact {
-    display: none;
-  }
-  #truSearch {
-    margin: 0 80px 0 10px;
   }
   #blocks {
     padding: 6rem 3rem 4rem 3rem;

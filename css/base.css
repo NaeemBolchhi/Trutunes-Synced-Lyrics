@@ -269,7 +269,7 @@ header > h3 {
   text-align: left;
   width: 100%;
   margin: 0 0 20px 0;
-  padding: 15px 15px 0 15px;
+  padding: 15px;
   border: 1px solid transparent;
   background: #f5f7fa;
   transition-duration: 0.2s;
@@ -361,8 +361,11 @@ header > nav > a {
 header > nav > a:hover {
   border-bottom: 2px solid #4e5860;
 }
-#header-wide {
-  display: none;
+header > nav > a:first-child {
+  margin: 0;
+}
+header {
+  gap: 4vw;
 }
 #truSearch {
   border-radius: 3px;
@@ -371,7 +374,6 @@ header > nav > a:hover {
   height: 35px;
   display: none;
   flex: 1 0 auto;
-  margin: 0 40px 0 10px;
 }
 #truSearch > input {
   box-sizing: border-box;
