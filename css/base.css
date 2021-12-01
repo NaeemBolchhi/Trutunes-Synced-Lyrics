@@ -258,7 +258,7 @@ header > h3 {
   top: 0;
   left: 0;
   background: #ffffff;
-  margin-top: 100%;
+  margin-top: 100vh;
   overflow: hidden;
   transition: margin 200ms ease-in-out;
 }
