@@ -250,17 +250,20 @@ header > h3 {
 #lyrics {
   z-index: 4;
   flex-direction: column;
-}
-#lyrics {
   padding: 6rem 2rem 1.5rem 2rem;
 }
-#lyrics, #navbar, #config {
+.hoverboard {
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  margin: 0;
   background: #ffffff;
+  margin-top: 100%;
+  overflow: hidden;
+  transition: margin 200ms ease-in-out;
+}
+.hoverboard.visible {
+  margin: 0;
 }
 #lyricsText {
   resize: none;

@@ -65,6 +65,7 @@ async function lyricsHover(id) {
   var source = document.getElementById(id);
   var lyrics = document.getElementById('lyrics');
   var blocks = document.getElementById('blocks');
+  var header = document.getElementsByTagName('header')[0];
 
   lyrics.getElementsByClassName('btn-second')[0].href = '/lrc/' + id + '.lrc';
   lyrics.getElementsByClassName('btn-second')[0].download = source.getElementsByTagName('song')[0].innerHTML + '.lrc';
@@ -77,8 +78,22 @@ async function lyricsHover(id) {
   lyrics.getElementsByTagName('artist')[0].innerHTML = source.getElementsByTagName('artist')[0].innerHTML;
   lyrics.getElementsByTagName('artist')[1].innerHTML = source.getElementsByTagName('artist')[0].innerHTML;
 
-  lyrics.classList.remove('hidden');
-  blocks.classList.add('hidden');
+  lyrics.classList.add('visible');
+  setTimeout(function(){ blocks.classList.add('hidden');
+  header.classList.remove('header-shadow');
+  header.classList.add('header-border'); }, 210)
+}
+
+// Hide lyrics window, or whatever hovering window is active.
+function hideHover(element) {
+  var hoverBoard = document.getElementById(element);
+  var header = document.getElementsByTagName('header')[0];
+  var blocks = document.getElementById('blocks');
+
+  header.classList.remove('header-border');
+  header.classList.add('header-shadow');
+  blocks.classList.remove('hidden');
+  hoverBoard.classList.remove('visible');
 }
 
 // Select text on click.
