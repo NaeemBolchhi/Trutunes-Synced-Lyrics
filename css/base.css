@@ -259,7 +259,7 @@ header > h3 {
   left: 0;
   background: #ffffff;
   margin-top: 100vh;
-  overflow: hidden;
+  overflow-y: scroll;
   transition: margin 200ms ease-in-out;
 }
 .hoverboard.visible {
@@ -279,6 +279,7 @@ header > h3 {
   border-radius: 3px;
   outline: none;
   height: 100%;
+  min-height: 300px;
 }
 #lyricsText:focus {
   background: #f4f6f8;
